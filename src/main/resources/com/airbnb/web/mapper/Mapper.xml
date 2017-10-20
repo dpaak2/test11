@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airbnb.web.mapper.Mapper">
+     <resultMap id="resultMap" type="com.airbnb.web.command.Command">
+   		<id property="articleSeq" column="article_seq"/>
+   		<result property="id" column="member_id"/>
+   		<result property="title" column="title"/>
+   		<result property="content" column="content"/>
+   		<result property="regdate" column="regdate"/>
+   		<result property="hitCount" column="hitcount"/>
+   </resultMap>
+   
+   <select id="count" resultMap="resultMap" parameterType="com.airbnb.web.command.Command">
+       
+   </select>
+  
+
+<insert id="insert" parameterType="com.airbnb.web.command.Command">
+</insert>
+
+<select id="selectOne" 
+    resultMap="resultMap"
+    parameterType="com.airbnb.web.command.Command">
+    
+</select>
+<update id="update" 
+   parameterType="com.airbnb.web.command.Command">
+</update>
+<delete id="delete"
+    parameterType="com.airbnb.web.command.Command">
+</delete>
+</mapper>
